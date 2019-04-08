@@ -17,7 +17,7 @@ class TodoForm extends Component {
     e.preventDefault();
 
     const newTodo = {
-      id: Date.now(),
+      id: `${Date.now()}`,
       task: this.state.task,
       completed: false
     };
@@ -33,6 +33,7 @@ class TodoForm extends Component {
     return (
       <form onSubmit={this.onFormSubmit} className="TodoForm">
         <input
+          required
           onChange={this.onInputChange}
           type="text"
           name="task"
