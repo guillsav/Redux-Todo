@@ -1,7 +1,12 @@
 import {ADD_TODO} from '../actions';
 
 const initialState = {
-  todos: []
+  todos: [
+    {
+      task: 'Walk the dog',
+      completed: false
+    }
+  ]
 };
 
 const reducer = (state = initialState, action) => {

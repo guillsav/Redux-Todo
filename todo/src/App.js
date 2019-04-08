@@ -1,26 +1,32 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {addTodo} from './actions';
+
+import TodoList from './components/TodoList';
+import TodoForm from './/components/TodoForm';
 
 import './App.css';
 
 class App extends Component {
-  addNewTodo = e => {
-    e.preventDefault();
-  };
-
   render() {
-    return <div className="App">App</div>;
+    return (
+      <div className="App">
+        <h2>Todos</h2>
+        <TodoForm />
+        {this.props.todos.map((todo, index) => (
+          <TodoList key={index} todo={todo} />
+        ))}
+      </div>
+    );
   }
 }
 
-const mapStateToProp = state => {
+const mapStateToProps = state => {
   return {
     todos: state.todos
   };
 };
 
 export default connect(
-  mapStateToProp,
-  {addTodo}
+  mapStateToProps,
+  {}
 )(App);
