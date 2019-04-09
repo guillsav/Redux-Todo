@@ -12,6 +12,7 @@ const TodoList = props => {
             completed={todo.completed}
             task={todo.task}
             getTodo={props.getTodo}
+            deleteTodo={props.deleteTodo}
           />
         );
       })}

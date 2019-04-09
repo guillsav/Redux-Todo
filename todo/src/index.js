@@ -7,7 +7,31 @@ import rootReducer from './reducers';
 import App from './App';
 import './index.css';
 
-const store = createStore(rootReducer);
+const saveTolocalStorge = state => {
+  try {
+    const json = JSON.stringify(state);
+    localStorage.setItem('state', json);
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+const loadfromLocalStorage = () => {
+  try {
+    const state = localStorage.getItem('state');
+    if (state === null) return undefined;
+    return JSON.parse(state);
+  } catch (e) {
+    console.log(e);
+    return undefined;
+  }
+};
+
+const stateToLocalStorage = loadfromLocalStorage();
+
+const store = createStore(rootReducer, stateToLocalStorage);
+
+store.subscribe(() => saveTolocalStorge(store.getState()));
 
 ReactDOM.render(
   <Provider store={store}>

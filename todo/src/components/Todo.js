@@ -11,6 +11,7 @@ const Todo = props => {
       >
         {props.task}
       </h4>
+      <button onClick={() => props.deleteTodo(props.id)}>Remove</button>
     </div>
   );
 };
