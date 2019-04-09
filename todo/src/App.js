@@ -9,11 +9,17 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <h2>Todos</h2>
-        <TodoForm />
-        <TodoList todos={this.props.todos} />
-      </div>
+      <React.Fragment>
+        <div className="App">
+          <h2>Create a list of things to do:</h2>
+          <TodoForm />
+        </div>
+        {this.props.todos.length > 0 && (
+          <div className="list">
+            <TodoList todos={this.props.todos} />
+          </div>
+        )}
+      </React.Fragment>
     );
   }
 }

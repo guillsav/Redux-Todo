@@ -17,13 +17,14 @@ class Todo extends React.Component {
   render() {
     return (
       <div className="Todo">
-        <h4
-          onClick={() => this.selectTodo(this.props.id)}
-          className={`${!this.props.completed ? '' : 'done'}`}
-        >
-          {this.props.task}
-        </h4>
-        <button onClick={() => this.deleteTodo(this.props.id)}>Remove</button>
+        <div onClick={() => this.selectTodo(this.props.id)} className="task">
+          <h4 className={`${!this.props.completed ? '' : 'done'}`}>
+            {this.props.task.toUpperCase()}
+          </h4>
+        </div>
+        <button onClick={() => this.deleteTodo(this.props.id)}>
+          <i className="far fa-trash-alt fa-lg" />
+        </button>
       </div>
     );
   }

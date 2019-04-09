@@ -1,4 +1,37 @@
+.Todo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  border-bottom: 1px solid #282c3410;
+  padding: 20px 0 30px 0;
+}
+
+.Todo .task {
+  width: 100%;
+}
+
+.Todo .task h4 {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.Todo button {
+  background: none;
+  width: 80px;
+  height: 44px;
+  border: 0;
+  opacity: 0.5;
+  transition: all 0.3s;
+  outline: none;
+}
+
+.Todo button:hover {
+  opacity: 1;
+  color: rgba(255, 0, 0, 0.633);
+}
+
 .done {
-  text-decoration: line-through;
-  opacity: 0.6;
+  opacity: 0.4;
 }
