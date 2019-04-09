@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {addTodo, toggleTodo, deleteTodo} from './actions';
+import {toggleTodo, deleteTodo} from './actions';
 
 import TodoList from './components/TodoList';
 import TodoForm from './/components/TodoForm';
