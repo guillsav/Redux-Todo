@@ -1,0 +1,61 @@
+.TodoForm {
+  width: 100%;
+}
+
+.TodoForm .form-item {
+  width: 100%;
+  display: flex;
+}
+
+.TodoForm input {
+  width: 80%;
+  height: 40px;
+  border-radius: 4px 0 0 4px;
+  border-top: 1px;
+  border-bottom: 1px;
+  border-left: 1px;
+  border-right: 0;
+  border-color: #ddd;
+  border-style: solid;
+  padding-left: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  margin: 0;
+}
+
+.TodoForm input::placeholder {
+  font-size: 15px;
+  font-weight: 400;
+  color: #acacac;
+}
+
+.TodoForm .error-feedback {
+  font-size: 13px;
+  color: red;
+  width: 100%;
+  text-align: left;
+  margin-top: 8px;
+}
+
+.TodoForm input[type='submit'] {
+  width: 20%;
+  height: 44px;
+  border: 1px solid rgb(42, 138, 235);
+  border-radius: 0 4px 4px 0;
+  background: dodgerblue;
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.3s;
+  cursor: pointer;
+  outline: none;
+}
+
+.TodoForm input[type='submit']:hover {
+  background: rgb(23, 113, 203);
+  border: 0;
+}
+
+.TodoForm .error-on {
+  border: 1px solid red;
+  border-right: 0;
+}

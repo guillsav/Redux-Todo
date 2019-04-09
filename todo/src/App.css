@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  height: 130px;
+  border: 1px solid #282c3415;
+  box-shadow: 0px 20px 20px #282c341c;
+}
+
+.App h2 {
+  text-align: left;
+}
+.list {
+  max-width: 600px;
+  margin: 0px auto;
+  padding: 10px 20px 0 30px;
+  border: 1px solid #282c3415;
+  box-shadow: 0px 20px 20px #282c341c;
+}
