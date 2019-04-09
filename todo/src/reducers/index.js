@@ -15,7 +15,14 @@ const reducer = (state = initialState, action) => {
     case ADD_TODO:
       return {
         ...state,
-        todos: [...state.todos, action.payload]
+        todos: [
+          ...state.todos,
+          {
+            id: Date.now(),
+            task: action.payload,
+            completed: false
+          }
+        ]
       };
     case TOGGLE_TODO:
       return {
@@ -31,7 +38,10 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         todos: state.todos.filter(todo => {
-          return todo.completed !== action.payload.completed;
+          if (todo.completed) {
+            return todo.completed !== action.payload.completed;
+          }
+          return todo;
         })
       };
     default:
