@@ -29,7 +29,11 @@ const loadfromLocalStorage = () => {
 
 const stateToLocalStorage = loadfromLocalStorage();
 
-const store = createStore(rootReducer, stateToLocalStorage);
+const store = createStore(
+  rootReducer,
+  stateToLocalStorage,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 store.subscribe(() => saveTolocalStorge(store.getState()));
 
